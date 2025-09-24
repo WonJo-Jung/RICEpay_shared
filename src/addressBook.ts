@@ -8,7 +8,7 @@ export interface AddressBookEntry {
   name: string;
   network: Network;
   address: string;       // 체크섬 정규화 후 저장 권장
-  memo?: string;
+  memo: string;
   usageCount: number;    // 기본 0
   lastUsedAt?: string;   // ISO
   createdAt: string;     // ISO
