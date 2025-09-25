@@ -1,6 +1,3 @@
-
-import { defineChain } from 'viem';
-
 // Base mainnet + Base Sepolia IDs (per viem)
 export const BASE = {
   id: 8453,

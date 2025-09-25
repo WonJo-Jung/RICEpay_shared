@@ -1,7 +1,5 @@
 import { getAddress, isAddress } from "viem";
-
-// shared/types (프론트/앱 공용)
-export type Network = 'ETHEREUM' | 'BASE' | 'POLYGON' | 'ARBITRUM';
+import type { Network } from "./network";
 
 export interface AddressBookEntry {
   id: string;            // uuid/cuid
