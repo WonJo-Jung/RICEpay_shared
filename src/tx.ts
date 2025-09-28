@@ -8,6 +8,7 @@ export type TxStatus =
   | 'CONFIRMED'
   | 'FAILED'
   | 'DROPPED_REPLACED'
+  | 'EXPIRED'
   | 'UNKNOWN';
 
 export interface TxRecord {
