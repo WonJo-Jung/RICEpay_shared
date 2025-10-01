@@ -5,3 +5,4 @@ export * from './utils';
 export * from './addressBook';
 export * from './tx';
 export * from './network';
+export * from './receipt';
