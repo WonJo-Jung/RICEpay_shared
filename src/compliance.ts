@@ -24,7 +24,7 @@ export type PreflightBlock =
   | {
       ok: false;
       type: 'SACTIONS';
-      error: 'provider_unavailable',
+      reason: 'provider_unavailable',
   };
 
 export type PreflightResponse = PreflightOk | PreflightBlock;
