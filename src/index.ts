@@ -6,3 +6,4 @@ export * from './addressBook';
 export * from './tx';
 export * from './network';
 export * from './receipt';
+export * from './compliance';
