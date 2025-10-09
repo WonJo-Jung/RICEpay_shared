@@ -33,4 +33,4 @@ export type PreflightResponse = PreflightOk | PreflightBlock;
 export type ComplianceErrorBody =
   | { ok: false; type: 'GEOFENCE'; level: 'COUNTRY' | 'REGION'; country?: string | null; region?: string | null; reason?: string } // 451
   | { ok: false; type: 'SANCTIONS'; reason?: string; checksum: `0x${string}` }                                                     // 403
-  | { ok: false; type: 'SANCTIONS'; error: 'provider_unavailable' };                                                               // 503
+  | { ok: false; type: 'SANCTIONS'; reason: 'provider_unavailable' };                                                               // 503
