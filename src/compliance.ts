@@ -23,7 +23,7 @@ export type PreflightBlock =
     }
   | {
       ok: false;
-      type: 'SACTIONS';
+      type: 'SANCTIONS';
       reason: 'provider_unavailable',
   };
 
