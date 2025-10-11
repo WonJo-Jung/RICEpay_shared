@@ -1,7 +1,5 @@
 // RICEpay_shared/lib/compliance.ts
 
-import { TxRecord } from "./tx";
-
 /** 백엔드 /v1/compliance/preflight 응답 타입 (항상 200 OK) */
 export type PreflightOk = {
   ok: true;
@@ -36,9 +34,3 @@ export type ComplianceErrorBody =
   | { ok: false; type: 'GEOFENCE'; level: 'COUNTRY' | 'REGION'; country?: string | null; region?: string | null; reason?: string } // 451
   | { ok: false; type: 'SANCTIONS'; reason?: string; checksum: `0x${string}` }                                                     // 403
   | { ok: false; type: 'SANCTIONS'; reason: 'provider_unavailable' };                                                              // 503
-
-export type TransferResult = {
-  hash: `0x${string}`, result: { kind: 'success'; record: TxRecord } 
-} | {
-  hash?: `0x${string}`, result: { kind: 'error'; status: number; data: ComplianceErrorBody }
-}
