@@ -1,10 +1,17 @@
 // Base mainnet + Base Sepolia IDs (per viem)
+const alchemy_network_api_key = "DN_2iNz6IGdOy9a9n7Px6";
+export const sepoliaRpc = `https://base-sepolia.g.alchemy.com/v2/${alchemy_network_api_key}`;
+// === RPC (Mainnet) ===
+// 프론트는 공개돼도 되는 URL이지만, rate-limit 관리를 위해 백엔드 프록시 권장
+// 아래는 Alchemy Base Mainnet
+export const mainnetRpc = `https://base-mainnet.g.alchemy.com/v2/${alchemy_network_api_key}`;
+
 export const BASE = {
   id: 8453,
   name: 'Base',
   nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
   rpcUrls: {
-    default: { http: ['https://base-mainnet.g.alchemy.com/v2/DN_2iNz6IGdOy9a9n7Px6', 'https://mainnet.base.org'] }, // 앱/웹에서 env RPC로 override 권장
+    default: { http: [mainnetRpc] }, // 앱/웹에서 env RPC로 override 권장
   },
   blockExplorers: {
     default: { name: 'Basescan', url: 'https://basescan.org' },
@@ -13,9 +20,9 @@ export const BASE = {
 
 export const BASE_SEPOLIA = {
   id: 84532,
-  name: 'Base Sepolia',
+  name: 'Base Sepolia Testnet',
   nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
-  rpcUrls: { default: { http: ['https://base-sepolia.g.alchemy.com/v2/DN_2iNz6IGdOy9a9n7Px6', 'https://sepolia.base.org'] } },
+  rpcUrls: { default: { http: [sepoliaRpc] } },
   blockExplorers: {
     default: { name: 'Base Sepolia', url: 'https://sepolia-explorer.base.org' },
   },
