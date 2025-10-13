@@ -3,7 +3,12 @@ export const BASE = {
   id: 8453,
   name: 'Base',
   nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
-  rpcUrls: { default: { http: ['https://mainnet.base.org'] } }
+  rpcUrls: {
+    default: { http: ['https://mainnet.base.org'] }, // 앱/웹에서 env RPC로 override 권장
+  },
+  blockExplorers: {
+    default: { name: 'Basescan', url: 'https://basescan.org' },
+  },
 };
 
 export const BASE_SEPOLIA = {
@@ -18,7 +23,3 @@ export const BASE_SEPOLIA = {
 };
 
 export const USDC_DECIMALS = 6;
-
-// Replace with actual addresses
-export const USDC_BASE_ADDRESS = '0x0000000000000000000000000000000000000000';
-export const USDC_BASE_SEPOLIA_ADDRESS = '0x0000000000000000000000000000000000000000';
