@@ -1,1 +1,1 @@
-export type Network = 'BASE_SEPOLIA';
+export type Network = 'BASE_SEPOLIA' | 'BASE';
