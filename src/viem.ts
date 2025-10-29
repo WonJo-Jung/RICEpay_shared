@@ -9,6 +9,7 @@ export const mainnetRpc = `https://base-mainnet.g.alchemy.com/v2/${alchemy_netwo
 export const BASE = {
   id: 8453,
   name: 'BASE_MAINNET',
+  label: 'Base',
   nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
   rpcUrls: {
     default: { http: [mainnetRpc] }, // 앱/웹에서 env RPC로 override 권장
@@ -21,10 +22,11 @@ export const BASE = {
 export const BASE_SEPOLIA = {
   id: 84532,
   name: 'BASE_SEPOLIA',
+  label: 'Base Sepolia Testnet',
   nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
   rpcUrls: { default: { http: [sepoliaRpc] } },
   blockExplorers: {
-    default: { name: 'Base Sepolia', url: 'https://sepolia-explorer.base.org' },
+    default: { name: 'Sepolia Explorer', url: 'https://sepolia-explorer.base.org' },
   },
   testnet: true,
 };
