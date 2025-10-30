@@ -1,3 +1,5 @@
+import { Chain } from "viem";
+
 // Base mainnet + Base Sepolia IDs (per viem)
 const alchemy_network_api_key = "DN_2iNz6IGdOy9a9n7Px6";
 export const sepoliaRpc = `https://base-sepolia.g.alchemy.com/v2/${alchemy_network_api_key}`;
@@ -9,7 +11,7 @@ export const mainnetRpc = `https://base-mainnet.g.alchemy.com/v2/${alchemy_netwo
 export const BASE = {
   id: 8453,
   name: 'BASE_MAINNET',
-  label: 'Base',
+  label: 'Base' as unknown as Chain,
   nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
   rpcUrls: {
     default: { http: [mainnetRpc] }, // 앱/웹에서 env RPC로 override 권장
@@ -22,7 +24,7 @@ export const BASE = {
 export const BASE_SEPOLIA = {
   id: 84532,
   name: 'BASE_SEPOLIA',
-  label: 'Base Sepolia Testnet',
+  label: 'Base Sepolia Testnet' as unknown as Chain,
   nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
   rpcUrls: { default: { http: [sepoliaRpc] } },
   blockExplorers: {

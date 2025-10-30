@@ -1,5 +1,5 @@
 import { BASE_SEPOLIA } from "./viem";
-import type { Network } from "./network";
+import type { Network } from "./chain";
 
 export type ChainId = typeof BASE_SEPOLIA.id; // Base Sepolia
 

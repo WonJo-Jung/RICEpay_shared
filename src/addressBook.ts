@@ -1,5 +1,5 @@
 import { getAddress, isAddress } from "viem";
-import type { Network } from "./network";
+import type { Network } from "./chain";
 
 export interface AddressBookEntry {
   id: string;            // uuid/cuid
