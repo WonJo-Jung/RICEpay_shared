@@ -1,5 +1,4 @@
 import { BASE_SEPOLIA } from "./viem";
-import type { Chain } from "./chain";
 
 export type ChainId = typeof BASE_SEPOLIA.id; // Base Sepolia
 
@@ -14,7 +13,7 @@ export type TxStatus =
 export interface TxRecord {
   id: string;
   chainId: ChainId;
-  chain: Chain;
+  chain: string;
   txHash: `0x${string}`;
   from: `0x${string}`;
   to: `0x${string}`;
