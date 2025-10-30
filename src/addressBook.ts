@@ -1,10 +1,10 @@
 import { getAddress, isAddress } from "viem";
-import type { Network } from "./chain";
+import type { Chain } from "./chain";
 
 export interface AddressBookEntry {
   id: string;            // uuid/cuid
   name: string;
-  network: Network;
+  chain: Chain;
   address: string;       // 체크섬 정규화 후 저장 권장
   memo: string;
   usageCount: number;    // 기본 0
