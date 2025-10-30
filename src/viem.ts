@@ -1,4 +1,4 @@
-import { Chain } from "viem";
+import { Chain } from "./chain";
 
 // Base mainnet + Base Sepolia IDs (per viem)
 const alchemy_network_api_key = "DN_2iNz6IGdOy9a9n7Px6";
