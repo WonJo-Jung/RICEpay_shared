@@ -7,4 +7,4 @@ export * from './tx';
 export * from './chain';
 export * from './receipt';
 export * from './compliance';
-export const RicePayTransferPull = './RicePayTransferPull.json';
+export const RPT_ABI = './RicePayTransferPull.json';
