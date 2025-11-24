@@ -1,9 +1,11 @@
+export type Direction = 'SENT' | 'RECEIVED' | 'UNKNOWN';
+
 export type ReceiptItem = {
   id: string;
   chainId: number;
   network: string;
   txHash: string;
-  direction: 'SENT' | 'RECEIVED'; // 서버 값(현재 SENT 위주) — 없으면 클라에서 계산 fallback 가능
+  direction: Direction; // 서버 값(현재 SENT 위주) — 없으면 클라에서 계산 fallback 가능
   token: string;
   amount: string;
   fiatCurrency: string;
