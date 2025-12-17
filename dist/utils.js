@@ -48,12 +48,12 @@ function toUserMessage(err) {
     }
     const msg = err?.shortMessage || err?.message;
     if (msg?.includes("User rejected"))
-        return "서명을 취소했어요.";
+        return "The signature was cancelled.";
     if (msg?.includes("chainId"))
-        return "Base Sepolia 네트워크로 전환해 주세요.";
+        return "Please switch to the Base network.";
     if (msg?.includes("insufficient funds"))
-        return "가스비가 부족해요.";
+        return "You don’t have enough gas to complete this transaction.";
     if (msg?.includes('"transfer" reverted'))
-        return '토큰 잔액이 부족합니다.';
-    return msg || "알 수 없는 오류가 발생했어요.";
+        return 'Insufficient token balance.';
+    return msg || "An unknown error occurred.";
 }
